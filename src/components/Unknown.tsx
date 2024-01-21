@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from 'react';
 
-const classError = "pl-2 !border  !border-red-300 rounded bg-red-100"
-const classGood = "pl-2 !border  !border-green-300 rounded bg-teal-100"
-const classNone = "pl-2 !border  !border-grey-300 rounded"
+const classError = "pl-2 !border  !border-red-400 rounded bg-red-100"
+const classGood = "pl-2 !border  !border-green-400 rounded bg-teal-100"
+const classNone = "pl-2 !border  !border-grey-400 rounded"
 
 const Unknown = ({text}:{text:string})=>{
     const [classString, setClassString] = useState<string>("!border  !border-grey-300 rounded")

@@ -36,7 +36,7 @@ function shuffleVerbs(array:Verb[]) {
 
 const Row = ({infinitive, past, participle, translation}:Verb)=>{
     const knownIndex = Math.floor(Math.random()*4)
-    const classes =  "p-4 border-b border-blue-gray-50";
+    const classes =  "p-4 border-b border-gray-400";
     return <tr key={infinitive}>
         <td className={classes}>{knownIndex === 0 ? infinitive : <Unknown text={infinitive}/>}</td>
         <td className={classes}>{knownIndex === 1 ? past : <Unknown text={past}/>}</td>
@@ -66,13 +66,13 @@ const TableForm = ()=>{
   }
     return <>
     <Controls onApply={transformVerbs} allVerbs={allVerbs} />
-    <table className="w-full min-w-max table-auto text-left">
+    <table className="mt-2 border border-slate-600 w-full min-w-max table-auto text-left">
     <thead>
       <tr>
         {TABLE_HEAD.map((head) => (
           <th
             key={head}
-            className="border-b border-blue-gray-100 bg-blue-gray-50 p-4"
+            className="border-b border-gray-300 p-4"
           >
               {head.toUpperCase()}
           </th>
