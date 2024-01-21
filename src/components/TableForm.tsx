@@ -82,9 +82,6 @@ const TableForm = ()=>{
             {TableHead}
           </tr>
       })}
-      
-
-
     </thead>
     <tbody className="flex-1 sm:flex-none">
       {verbs.map((verb:Verb,index:number)=>{
