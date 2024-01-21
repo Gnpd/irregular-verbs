@@ -27,9 +27,9 @@ const Controls = ({allVerbs,onApply}:Props)=>{
     <span className="text-slate-400 italic pl-2">{allVerbs[to-1]?.infinitive}</span></div>
     <div>
       <button 
-        className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" 
+        className="mt-2 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" 
         onClick={()=>onApply(from,to)}>
-        apply
+        Apply
       </button></div>
     </>
 }
