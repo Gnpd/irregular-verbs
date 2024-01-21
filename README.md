@@ -7,4 +7,4 @@ Simple quiz for irregular verbs
 
 ### Demo
 
-This app is online at this [link](https://irregularverbs-zeta.vercel.app/)
+This app is online at this [link](https://irregularverbsquiz.vercel.app/)
