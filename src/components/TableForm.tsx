@@ -16,6 +16,15 @@ interface VerbsObj {
   verbs: Verb[]
 }
 
+const TableHead = TABLE_HEAD.map((head) => (
+  <th
+    key={head}
+    className="p-3 text-left"
+  >
+      {head.toUpperCase()}
+  </th>
+))
+
 function shuffleVerbs(array:Verb[]) {
   let currentIndex = array.length,  randomIndex;
 
@@ -36,8 +45,8 @@ function shuffleVerbs(array:Verb[]) {
 
 const Row = ({infinitive, past, participle, translation}:Verb)=>{
     const knownIndex = Math.floor(Math.random()*4)
-    const classes =  "p-4 border-b border-gray-400";
-    return <tr key={infinitive}>
+    const classes = "border-grey-light border hover:bg-gray-100 p-3";
+    return <tr key={infinitive} className="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
         <td className={classes}>{knownIndex === 0 ? infinitive : <Unknown text={infinitive}/>}</td>
         <td className={classes}>{knownIndex === 1 ? past : <Unknown text={past}/>}</td>
         <td className={classes}>{knownIndex === 2 ? participle: <Unknown text={participle}/>}</td>
@@ -66,20 +75,18 @@ const TableForm = ()=>{
   }
     return <>
     <Controls onApply={transformVerbs} allVerbs={allVerbs} />
-    <table className="mt-2 border border-slate-600 w-full min-w-max table-auto text-left">
-    <thead>
-      <tr>
-        {TABLE_HEAD.map((head) => (
-          <th
-            key={head}
-            className="border-b border-gray-300 p-4"
-          >
-              {head.toUpperCase()}
-          </th>
-        ))}
-      </tr>
+    <table className="w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5">
+    <thead className="text-white">
+      {allVerbs.map((verb)=>{
+        return <tr key={verb.infinitive} className="bg-teal-400 flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0">
+            {TableHead}
+          </tr>
+      })}
+      
+
+
     </thead>
-    <tbody>
+    <tbody className="flex-1 sm:flex-none">
       {verbs.map((verb:Verb,index:number)=>{
     const { infinitive, past, participle, translation} = verb
     return <Row key={index} infinitive={infinitive} past={past} participle={participle} translation={translation} />

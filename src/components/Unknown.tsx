@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from 'react';
 
-const classError = "pl-2 !border  !border-red-400 rounded bg-red-100"
-const classGood = "pl-2 !border  !border-green-400 rounded bg-teal-100"
-const classNone = "pl-2 !border  !border-grey-400 rounded"
+const classError = "pl-2 !border !border-red-400 rounded bg-red-100 w-full"
+const classGood = "pl-2 !border !border-green-400 rounded bg-teal-100 w-full"
+const classNone = "pl-2 !border !border-grey-400 rounded w-full"
 
 const Unknown = ({text}:{text:string})=>{
-    const [classString, setClassString] = useState<string>("!border  !border-grey-300 rounded")
+    const [classString, setClassString] = useState<string>(classNone)
     const splited = text.split(', ')
     const handleChange = (e: React.FormEvent<HTMLInputElement>)=>{
         const value = e.currentTarget.value;
