@@ -9,7 +9,7 @@ const Unknown = ({text}:{text:string})=>{
     const [classString, setClassString] = useState<string>(classNone)
     const splited = text.split(', ')
     const handleChange = (e: React.FormEvent<HTMLInputElement>)=>{
-        const value = e.currentTarget.value;
+        const value = e.currentTarget.value.toLowerCase();
         if(value === ''){
             setClassString(classNone)
         } else if (value === text || splited.includes(value)){
