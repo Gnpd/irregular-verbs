@@ -19,11 +19,12 @@ const Controls = ({allVerbs,onApply}:Props)=>{
         const value = e.currentTarget.value;
         setTo(Number(value))
       }
+      console.log(allVerbs.length)
     return <>
     <div>from <input type="number" onChange={handleChangeFrom} min='1' value={from} className={classNone} /> 
-    <span className="text-slate-400 italic pl-2">{allVerbs[from]?.infinitive}</span></div>
-    <div>to <input type="number" onChange={handleChangeTo} min='2' max={allVerbs.length-1} value={to} className={classNone}/>
-    <span className="text-slate-400 italic pl-2">{allVerbs[to]?.infinitive}</span></div>
+    <span className="text-slate-400 italic pl-2">{allVerbs[from-1]?.infinitive}</span></div>
+    <div>to <input type="number" onChange={handleChangeTo} min='2' max={allVerbs.length} value={to} className={classNone}/>
+    <span className="text-slate-400 italic pl-2">{allVerbs[to-1]?.infinitive}</span></div>
     <div>
       <button 
         className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" 
