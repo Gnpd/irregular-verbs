@@ -12,8 +12,8 @@
         "translation": "despertarse"
       },
       {
-        "infinitive": "be",
-        "past": "was",
+        "infinitive": "be, am, are, is",
+        "past": "was,were",
         "participle": "been",
         "translation": "ser, estar"
       },
@@ -243,7 +243,7 @@
         "infinitive": "fight",
         "past": "fought",
         "participle": "fought",
-        "translation": "lucharse"
+        "translation": "luchar"
       },
       {
         "infinitive": "find",
