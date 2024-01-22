@@ -69,7 +69,9 @@ const TableForm = ()=>{
   if (!verbs) return <div>Loading...</div>;
 
   const transformVerbs = (from:number,to:number)=>{
-    const slice = [...allVerbs].splice(from-1, to-1)
+    const slice = allVerbs.slice(from-1, to)
+    console.log({from,to})
+    console.log(slice.map(({infinitive}:{infinitive:string})=>infinitive))
     const random = shuffleVerbs(slice)
     setVerbs(random)
   }
