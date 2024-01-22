@@ -68,12 +68,13 @@ const TableForm = ()=>{
 
   if (!verbs) return <div>Loading...</div>;
 
-  const transformVerbs = (from:number,to:number)=>{
+  const transformVerbs = (from:number,to:number, total:number)=>{
     const slice = allVerbs.slice(from-1, to)
-    console.log({from,to})
-    console.log(slice.map(({infinitive}:{infinitive:string})=>infinitive))
+    //console.log(slice.map(({infinitive}:{infinitive:string})=>infinitive))
     const random = shuffleVerbs(slice)
-    setVerbs(random)
+    const toTotal = random.slice(0,total)
+    console.log(toTotal.map(({infinitive}:{infinitive:string})=>infinitive))
+    setVerbs(toTotal)
   }
     return <>
     <Controls onApply={transformVerbs} allVerbs={allVerbs} />
