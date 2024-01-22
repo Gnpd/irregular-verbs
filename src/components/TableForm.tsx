@@ -73,7 +73,6 @@ const TableForm = ()=>{
     //console.log(slice.map(({infinitive}:{infinitive:string})=>infinitive))
     const random = shuffleVerbs(slice)
     const toTotal = random.slice(0,total)
-    console.log(toTotal.map(({infinitive}:{infinitive:string})=>infinitive))
     setVerbs(toTotal)
   }
     return <>

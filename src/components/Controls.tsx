@@ -28,7 +28,7 @@ const Controls = ({allVerbs,onApply}:Props)=>{
 
     return <>
     <div className="m-5 text-center">
-      Show <input type="number" onChange={handleChangeFrom} min='1' max={allVerbs.length} value={total} className={classNone} /> random verbs, from <input type="number" onChange={handleChangeFrom} min='1' value={from} className={classNone} /> 
+      Show <input type="number" onChange={handleChangeTotal} min='1' max={to-from} value={total} className={classNone} /> random verbs, from <input type="number" onChange={handleChangeFrom} min='1' value={from} className={classNone} /> 
     <span className="text-slate-400 italic p-1">({allVerbs[from-1]?.infinitive})</span> to <input type="number" onChange={handleChangeTo} min='2' max={allVerbs.length} value={to} className={classNone}/>
     <span className="text-slate-400 italic p-1">({allVerbs[to-1]?.infinitive})</span>
     </div>
