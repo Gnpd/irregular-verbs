@@ -77,7 +77,7 @@ const TableForm = ()=>{
     <Controls onApply={transformVerbs} allVerbs={allVerbs} />
     <table className="w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5">
     <thead className="text-white">
-      {allVerbs.map((verb)=>{
+      {verbs.map((verb)=>{
         return <tr key={verb.infinitive} className="bg-teal-400 flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0">
             {TableHead}
           </tr>
