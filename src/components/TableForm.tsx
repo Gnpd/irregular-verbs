@@ -45,7 +45,7 @@ function shuffleVerbs(array:Verb[]) {
 
 const Row = ({infinitive, past, participle, translation}:Verb)=>{
     const knownIndex = Math.floor(Math.random()*4)
-    const classes = "border-grey-light border hover:bg-gray-100 p-3";
+    const classes = "h-[3.084rem] border-grey-light border hover:bg-gray-100 p-3";
     return <tr key={infinitive} className="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
         <td className={classes}>{knownIndex === 0 ? infinitive : <Unknown text={infinitive}/>}</td>
         <td className={classes}>{knownIndex === 1 ? past : <Unknown text={past}/>}</td>
