@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Irregular Verbs Quiz",
   description: "A simple quiz for irregular verbs",
+  keywords:["verbs","irregular","quiz","learn","kids"]
 };
 
 export default function RootLayout({
