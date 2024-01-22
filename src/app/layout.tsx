@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex items-center justify-center">{children}</body>
+      <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS as string} />
     </html>
   );
 }
