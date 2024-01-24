@@ -7,12 +7,15 @@ const classNone = "pl-2 !border !border-grey-400 rounded w-full"
 
 const Unknown = ({text}:{text:string})=>{
     const [classString, setClassString] = useState<string>(classNone)
-    const splited = text.split(', ')
+    const splitedComaSpace = text.split(', ')
+    const splitedComa = text.split(',')
+    const splitedSlash = text.split('/')
+    const splitedSlashSpace = text.split(' / ')
     const handleChange = (e: React.FormEvent<HTMLInputElement>)=>{
         const value = e.currentTarget.value.toLowerCase();
         if(value === ''){
             setClassString(classNone)
-        } else if (value === text || splited.includes(value)){
+        } else if (value === text || splitedComaSpace.includes(value) || splitedComa.includes(value) || splitedSlash.includes(value) || splitedSlashSpace.includes(value)){
             setClassString(classGood)
         } else {
             setClassString(classError)
