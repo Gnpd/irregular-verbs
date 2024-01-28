@@ -73,14 +73,16 @@ const Row = ({infinitive, past, participle, translation}:Verb)=>{
   }
 
   const poss = ref.current?.getBoundingClientRect()
+  console.log(poss)
+  console.log(window.scrollY)
 
   const classes = "h-[3.084rem] border-grey-light border hover:bg-gray-100 p-3";
   return <tr key={infinitive} ref={ref} className="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
       <td className={classes}>
-      <span>{isExploding && <Confetti
+      {isExploding && <Confetti
       confettiSource={{ x:poss?.x as number, y:poss?.y as number, w:poss?.width as number, h:poss?.height as number }}
       recycle={false}
-    />}</span>
+    />}
       {knownIndex === 0 ? infinitive : <Unknown text={infinitive} onChange={(score)=>handleChange(0,score)}/>}
       </td>
       <td className={classes}>{knownIndex === 1 ? past : <Unknown text={past} onChange={(score)=>handleChange(1,score)}/>}</td>
