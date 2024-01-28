@@ -73,8 +73,6 @@ const Row = ({infinitive, past, participle, translation}:Verb)=>{
   }
 
   const poss = ref.current?.getBoundingClientRect()
-  console.log(poss)
-  console.log(window.scrollY)
 
   const classes = "h-[3.084rem] border-grey-light border hover:bg-gray-100 p-3";
   return <tr key={infinitive} ref={ref} className="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
