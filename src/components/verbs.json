@@ -327,19 +327,19 @@
         "infinitive": "have",
         "past": "had",
         "participle": "had",
-        "translation": " tener"
+        "translation": "tener, haber"
       },
       {
         "infinitive": "hear",
         "past": "heard",
         "participle": "heard",
-        "translation": "escuchar"
+        "translation": "escuchar, oir"
       },
       {
         "infinitive": "hide",
         "past": "hid",
         "participle": "hidden",
-        "translation": "esconder"
+        "translation": "ocultar, esconder"
       },
       {
         "infinitive": "hit",
@@ -351,7 +351,7 @@
         "infinitive": "hold",
         "past": "held",
         "participle": "held",
-        "translation": "agarrar"
+        "translation": "agarrar, celebrars"
       },
       {
         "infinitive": "hurt",
@@ -363,7 +363,7 @@
         "infinitive": "keep",
         "past": "kept",
         "participle": "kept",
-        "translation": "guardar"
+        "translation": "guardar, mantener"
       },
       {
         "infinitive": "kneel",
