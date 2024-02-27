@@ -9,7 +9,7 @@ const classNone = "pl-2 !border  !border-grey-300 rounded w-16"
 
 const Controls = ({allVerbs,onApply}:Props)=>{
     const [from, setFrom] = useState<number>(1)
-    const [to, setTo] = useState<number>(69)
+    const [to, setTo] = useState<number>(145)
     const [total, setTotal] = useState<number>(10)
 
 
